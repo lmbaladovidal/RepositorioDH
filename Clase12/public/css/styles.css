@@ -21,8 +21,34 @@ div button{
     font-size: 20px;
     
 }
+footer ul{
+    margin: 30px 30px;
+    padding:0px ;
+}
+footer h4{
+    text-align: center;
+    font-weight:bold; 
+    margin: 0%;   
+}
+footer div{
+    text-align: center;
+    font-size: small;
+}
+footer li>div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+footer i{
+    color: #1259c3;
+    padding: 0;
+}
 .precios{font-size: 18px;}
 .descuentos{font-size: 16;}
+.copyRight{
+    font-size: smaller;
+    padding-left: 2.5%;
+    text-align: left;
+}
 .burger-menu{
     text-align: center;
     padding-bottom: 10px;}
