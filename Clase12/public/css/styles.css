@@ -82,6 +82,7 @@ footer i{
     border: 1px solid #39b54a;
     border-radius: 50%;
     padding: 5px;
+    margin-top: 10px;
 }
 .precios{
     font-size: 18px;
@@ -97,7 +98,7 @@ footer i{
 }
 .article-box{
     margin-top: 5%;
-    border: 1 px solid #39b54a;
+    border-top: 1px solid #666;
     margin-left: 5%;
     text-align: left;
 }
@@ -124,4 +125,45 @@ footer i{
     .descripcion{
         display: block;
     }    
+}
+
+.descripcion{
+    display: none;
+   }
+   
+nav{
+    display:none;
+}
+   
+@media (min-width:361px)and(max-width:769px) 
+{
+    .descripcion{
+        display:block;
+    }
+    main section article{
+    box-shadow: 0 0 10px rgb(100,100,100);   
+    }
+    nav{
+        display:block;
+    }
+    div.burger-menu{
+        display:none;
+    }
+}
+
+@media (min-width:769px){
+    .descripcion{
+        display:block;
+    }
+    
+    main section article{
+        box-shadow: 0 0 10px rgb(100,100,100);   
+        }
+    nav{
+        display:block;
+    }
+    div.burger-menu{
+        display:block;
+    }
+    
 }
