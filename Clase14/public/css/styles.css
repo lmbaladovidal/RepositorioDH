@@ -78,7 +78,7 @@ footer i{
 }
 
 .section-title{
-    flex-shrink: 0
+    flex-shrink: 0;
 }
 
 .products{
@@ -190,25 +190,31 @@ nav{
     .descripcion{
         display:block;
     }
-    .main-article{
-        flex:50%
-    }
+
     nav{
         display:block;
     }
     div.burger-menu{
         display:none;
     }
-    body{background-color: #39b54a;}
+
+    main section .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .main-article{
+        flex:40%
+    }
 }
 
 @media (min-width:769px) {
-    body{background-color: red;}
     .descripcion{
         display:block;
     }
     .main-article{
-        flex:25%
+        flex:14%
     }
     nav{
         display:block;
