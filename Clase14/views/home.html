@@ -11,27 +11,35 @@
     <title>Mercado Liebre</title>
 </head>
 <body>
-    <header>
-        <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
-        <input type="text" title="Barra de Busqueda" width="100%" placeholder="Buscar">
-        <button><i class="fas fa-search"></i></button>
-        <h4><i class="fas fa-hand-holding-usd"></i> en cuotas y sin tarjeta de crédito</h4> 
-        <nav>
-            <ul>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo Mercado Liebre">
+            <div class="search-bar">
+                <input type="text" title="Barra de Busqueda" placeholder="Buscar productos, marcas">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <h2 class="copy-header"> 
+                <i class="fas fa-hand-holding-usd"></i>
+                Comprá en cuotas y sin tarjeta de crédito
+            </h2> 
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars fa-xs"></i>
+        </div>
+        <nav class="main-navbar">
+            <ul class="left-bar">
                 <li><a href="">Ofertas</a></li>
                 <li><a href="">Tiendas Oficiales</a></li>
                 <li><a href="">Vender</a></li>
                 <li><a href="">Ayuda</a></li>
             </ul>
-            <ul>
+            <ul class="rigth-bar">
                 <li><a href="">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
                 <li><a href="">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href="">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
-        <div class="burger-menu">
-            <button><i class="fas fa-bars"></i></button>
-        </div>
+
     </header>
     <section>
         <img src="/images/img-home-banner.jpg" alt="Banner Mercado Liebre" class="bannerImg">
