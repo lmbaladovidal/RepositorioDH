@@ -250,6 +250,26 @@ footer i{
         margin: 0 5px;
     }
 
+    .frm-register{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 40%;
+    }
+
+    .frm-register *{
+        margin-top: 10px;
+    }
+
+    .frm-register [type="text"], [type="date"]{
+        width: 100%;
+        border-radius: 5px;
+        border:0;
+        height: 30px
+    };
+
+
     .descripcion{
         display:block;
     }
