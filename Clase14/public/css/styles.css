@@ -188,7 +188,87 @@ footer i{
     display: none;
 }
 
+.registrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 45%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #1259c3;
+    border-radius: 6px;
+    color: #ebebeb;
+    font-family: 'roboto';
+    font-size: 18pt;
+}
+
+.div-frm-log{
+    margin: 15px auto;
+    width: 70%;
+    align-content: center;
+}
+
+.frm-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.frm-login [type="text"], .frm-login [type="password"]{
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 5px;
+    border:0;
+    height: 30px    
+}
+
+.frm-login [type="submit"]{
+    background-color: #1259c3;
+    width: 100%;
+    margin-top: 20px;
+    color: #ebebeb;
+    border-radius: 4px;
+    height: 30px
+}
    
+.div-submit{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.frm-register [type = 'submit'], .frm-register [type = 'reset']{
+    background-color: #1259c3;
+    margin-top: 20px;
+    color: #ebebeb;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+.frm-register{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.frm-register *{
+    margin-top: 10px;
+}
+
+.frm-register [type="text"], .frm-register [type="date"], .frm-register [type="password"], .frm-register [type="email"]{
+    width: 100%;
+    border-radius: 5px;
+    border:0;
+    height: 30px
+};
+
+
+
+
 @media (max-width:360) 
 {
     .descripcion{
@@ -225,6 +305,10 @@ footer i{
     }
 }
 
+
+
+
+
 @media (min-width:768px) {
     .main-header-top-bar{
         display: flex;
@@ -250,24 +334,6 @@ footer i{
         margin: 0 5px;
     }
 
-    .frm-register{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        width: 40%;
-    }
-
-    .frm-register *{
-        margin-top: 10px;
-    }
-
-    .frm-register [type="text"], [type="date"]{
-        width: 100%;
-        border-radius: 5px;
-        border:0;
-        height: 30px
-    };
 
 
     .descripcion{

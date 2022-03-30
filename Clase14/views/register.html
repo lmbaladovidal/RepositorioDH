@@ -9,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <title>Register</title>
+    <script>
+        function validar(){
+            if(document.getElementById("pass").value == document.getElementById("passVerify").value){
+                document.getElementById("passVerify").style.backgroundColor = 'green'
+                document.getElementById("pwsd-error-msg").innerHTML = ''
+            }else{
+                document.getElementById("passVerify").style.backgroundColor = 'pink'
+                document.getElementById("pwsd-error-msg").innerHTML = 'Error'
+            }
+            console.log("paso");
+        }
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -39,33 +51,37 @@
                 <li><a href="">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
-
     </header>
     <main>
         <div class="div-frm">
-            <form action="registrar" method="post" class="frm-register">
-                <input type="text" placeholder="Nombre y apellido">
-                <input type="text" placeholder="Nombre de usuario">
-                <input type="text" placeholder="E-mail">
+            <form action="registered" method="GET" class="frm-register">
+                <input type="text" placeholder="Nombre y apellido" required>
+                <input type="text" placeholder="Nombre de usuario" required> 
+                <input type="email" placeholder="E-mail" required  minlength="6" maxlength="64">
                 <h4>Fecha de nacimiento</h4>
-                <input type="date">
-                <input type="text" placeholder="Domicilio">
+                <input type="date" required>
+                <input type="text" placeholder="Domicilio" required>
                 <h4>Perfil de usuario</h4>
-                <label for=""><input type="radio" name="tipo-usuario" value="c">Comprador</label>
-                <label for=""><input type="radio" name="tipo-usuario" value="v">Vendedor</label>
-                <br>
+                <div>
+                    <label for="comprador"><input type="radio" id="comprador" name="tipo-usuario" value="c" checked>Comprador</label>
+                    <label for="vendedor"><input type="radio" name="tipo-usuario" id="vendedor" value="v">Vendedor</label>
+                </div>
                 <h4>Intereses</h4>
-                <label for=""><input type="checkbox" value="electro">Electro</label>
-                <label for=""><input type="checkbox" value="moda">Moda</label>
-                <label for=""><input type="checkbox" value="hogar">Hogar</label>
-                <label for=""><input type="checkbox" value="jugueteria">Jugueteria</label>
-                <label for=""><input type="checkbox" value="vida">Vida Sana</label>
-                <input type="file" accept="jpg">
-                <input type="password">
-                <input type="password">
+                <label for="electro"><input type="checkbox" id="electro"  value="electro">Electro</label>
+                <label for="moda"><input type="checkbox" id="moda" value="moda">Moda</label>
+                <label for="hogar"><input type="checkbox" id="hogar" value="hogar">Hogar</label>
+                <label for="jugueteria"><input type="checkbox" id="jugueteria" value="jugueteria">Jugueteria</label>
+                <label for="vida"><input type="checkbox" id="vida" value="vida">Vida Sana</label>
+                <label for="avatar">Elegí una foto de perfil:</label>
+                <input type="file" accept="image/png, image/jpeg , image/jpg" value="Foto de perfil" id="avatar">
+                <input type="password" id="pass" placeholder="Contraseña" required minlength="8">
+                <input type="password" id="passVerify" placeholder="Confirmar contraseña" required  onkeyup="validar()">
+                <div>
+                    <span id="pwsd-error-msg"></span>
+                </div>
                 <div class="div-submit">
-                    <input type="submit"></button>
-                    <input type="reset"></button>
+                    <input type="submit" value="Enviar datos">
+                    <input type="reset" value="Limpiar Campos">
                 </div>                
             </form>
         </div>
