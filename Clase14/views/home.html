@@ -9,6 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <title>Mercado Liebre</title>
+    <script>
+        function mostrarDescripcion(){
+            elemento =document.getElementsByClassName("descripcion");
+            elemento[0].style.display="block"            
+        }
+        function ocultarDescripcion(){
+            elemento =document.getElementsByClassName("descripcion");
+            elemento[0].style.display="none"            
+        }
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -40,14 +50,14 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="div-banner">
         <img src="/images/img-home-banner.jpg" alt="Banner Mercado Liebre" class="bannerImg">
     </section>
-    <main>
+    <main class="home-main">
         <section>
             <h3 class="section-title">Basado en tu última visita</h3>
             <div class="products">
-                <div class="main-article">
+                <div class="main-article" onmouseenter="mostrarDescripcion()" onmouseleave="ocultarDescripcion()">
                         <img src="/images/img-cafetera-moulinex.jpg" alt="Imagen Cafeterea Moulinex">
                         <div class="article-box">
                             <i class="fas fa-truck"></i>

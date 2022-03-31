@@ -13,9 +13,15 @@ main{
     margin: auto;
 }
 .main-header{
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    top:0;
     background-color:#EAC926;
     padding: 20px;
+    z-index: 10;
 }
+
 
 .copy-header{
     font-weight: 400;
@@ -104,6 +110,7 @@ footer i{
 }
 .bannerImg{
     width: 100vw;
+    margin-top: 195px;
 }
 
 .section-title{
@@ -123,7 +130,6 @@ footer i{
     flex-wrap: wrap;
     align-items: baseline;
     position: relative;
-    box-shadow: 0 0 10px rgb(100,100,100); 
     margin: 15px;
 }
 
@@ -173,7 +179,13 @@ footer i{
 }
 
 .fa-truck{
-    color: #39b54a;;
+    color: #39b54a;
+    transition-property: transform;
+    transition-duration: 600ms;
+}
+
+.fa-truck:hover{
+    transform: rotate(-90deg)
 }
 
 
@@ -199,7 +211,7 @@ footer i{
     background-color: #1259c3;
     border-radius: 6px;
     color: #ebebeb;
-    font-family: 'roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 18pt;
 }
 
@@ -207,6 +219,11 @@ footer i{
     margin: 15px auto;
     width: 70%;
     align-content: center;
+    margin-top: 200px;
+}
+
+.div-frm{
+    margin-top: 200px;
 }
 
 .frm-login{
@@ -266,14 +283,24 @@ footer i{
     height: 30px
 };
 
+.test:hover{
+    display: block;
+}
 
+.main-article:hover{
+    box-shadow: 0 0 10px rgb(100,100,100); 
+    transition-property: box-shadow;
+    transition-duration: 100ms;
+}
 
+.descripcion{
+    transition-property: display;
+    transition-duration: 500ms;
+}
 
 @media (max-width:360) 
 {
-    .descripcion{
-        display:none;
-    }
+
 
     .products{
         flex-direction: column;
@@ -286,9 +313,8 @@ footer i{
 }
 
 @media (min-width:361px)  {
-    .descripcion{
-        display:block;
-    }
+
+
 
     div.burger-menu{
         display:block;
@@ -310,6 +336,7 @@ footer i{
 
 
 @media (min-width:768px) {
+
     .main-header-top-bar{
         display: flex;
         justify-content: space-between;
@@ -335,10 +362,6 @@ footer i{
     }
 
 
-
-    .descripcion{
-        display:block;
-    }
     .main-article{
         flex:14%
     }
@@ -351,6 +374,7 @@ footer i{
 
 @media (min-width:1200px) {
     .logo{width: 350px;}
+
 
     .main-header-top-bar, .main-navbar{
         max-width: 1200px;
