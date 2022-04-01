@@ -9,21 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <title>Mercado Liebre</title>
-    <script>
-        function mostrarDescripcion(){
-            elemento =document.getElementsByClassName("descripcion");
-            elemento[0].style.display="block"            
-        }
-        function ocultarDescripcion(){
-            elemento =document.getElementsByClassName("descripcion");
-            elemento[0].style.display="none"            
-        }
-    </script>
 </head>
 <body>
     <header class="main-header">
         <div class="main-header-top-bar">
-            <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo Mercado Liebre">
+            <a href="/"><img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo Mercado Liebre"></a>
             <div class="search-bar">
                 <input type="text" title="Barra de Busqueda" placeholder="Buscar productos, marcas">
                 <button><i class="fas fa-search"></i></button>
@@ -57,7 +47,7 @@
         <section>
             <h3 class="section-title">Basado en tu última visita</h3>
             <div class="products">
-                <div class="main-article" onmouseenter="mostrarDescripcion()" onmouseleave="ocultarDescripcion()">
+                <div class="main-article">
                         <img src="/images/img-cafetera-moulinex.jpg" alt="Imagen Cafeterea Moulinex">
                         <div class="article-box">
                             <i class="fas fa-truck"></i>

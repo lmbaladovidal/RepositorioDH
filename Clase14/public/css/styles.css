@@ -31,7 +31,8 @@ main{
 .search-bar{
     display: flex;
     align-items: center;
-    max-height: 40px;
+    max-height: 80px;
+    margin: auto;
 }
 
 .burger-menu{
@@ -107,6 +108,8 @@ footer i{
     color: #1259c3;
     padding: 0;
     margin-bottom: 5px;
+    transition-property: color, text-shadow;
+    transition-duration: 200ms;
 }
 .bannerImg{
     width: 100vw;
@@ -131,6 +134,8 @@ footer i{
     align-items: baseline;
     position: relative;
     margin: 15px;
+    transition-property: box-shadow;
+    transition-duration: 200ms;
 }
 
 .main-article i{
@@ -149,7 +154,7 @@ footer i{
 
 .precio{
     font-size: 18px;
-    flex: 30%;
+    flex: 50%;
     align-self: flex-start;
 }
 
@@ -184,7 +189,7 @@ footer i{
     transition-duration: 600ms;
 }
 
-.fa-truck:hover{
+.main-article:hover .fa-truck{
     transform: rotate(-90deg)
 }
 
@@ -197,7 +202,9 @@ footer i{
 }
 
 .descripcion{
-    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 200ms;
 }
 
 .registrado{
@@ -237,7 +244,7 @@ footer i{
     margin: 15px 0;
     border-radius: 5px;
     border:0;
-    height: 30px    
+    height: 30px;    
 }
 
 .frm-login [type="submit"]{
@@ -246,7 +253,9 @@ footer i{
     margin-top: 20px;
     color: #ebebeb;
     border-radius: 4px;
-    height: 30px
+    height: 30px;
+    transition-property: background-color;
+    transition-duration: 300ms;
 }
    
 .div-submit{
@@ -280,24 +289,31 @@ footer i{
     width: 100%;
     border-radius: 5px;
     border:0;
-    height: 30px
+    height: 30px;
 };
 
-.test:hover{
-    display: block;
+.revisar{
+    background-color: #fff;
+}
+
+.btn-login:hover{
+    background-color: #0022AA;
 }
 
 .main-article:hover{
     box-shadow: 0 0 10px rgb(100,100,100); 
-    transition-property: box-shadow;
-    transition-duration: 100ms;
+    
 }
 
-.descripcion{
-    transition-property: display;
-    transition-duration: 500ms;
+.main-article:hover div .descripcion{
+    opacity: 100%;
 }
 
+footer ul i:hover{
+    color: #39b54a;
+    text-shadow: 0 0 30px rgb(103, 252, 140);
+
+}
 @media (max-width:360) 
 {
 
@@ -358,7 +374,7 @@ footer i{
     }
 
     .main-navbar li{
-        margin: 0 5px;
+        margin: 40px 5px;
     }
 
 
@@ -373,6 +389,7 @@ footer i{
 }
 
 @media (min-width:1200px) {
+
     .logo{width: 350px;}
 
 
@@ -395,4 +412,12 @@ footer i{
         align-self: center;
         font-weight: 400;
     }
+
+    footer ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+ 
+
 }
