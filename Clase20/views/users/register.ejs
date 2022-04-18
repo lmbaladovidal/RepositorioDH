@@ -1,0 +1,17 @@
+<%- include('../partials/head')%>
+<body>
+    <h2>Estamos en el register</h2>
+    
+    <% for (i=0;i<5;i++){%>
+        <div>
+        <label for="">Hobbie <%=i+1%></label>
+        <%if (i%2==0){%>
+            <input type="text" class="inpar" <%= "placeholder="+i%>>
+        <%}else{%>        
+            <input type="text" class="par" <%= "placeholder="+i%>>
+        <%}%>
+    </div>
+    <%}%>
+
+</body>
+</html>
