@@ -1,0 +1,18 @@
+<%- include('../partials/head')%>
+<body>
+    <h1>User List</h1>
+    <ul>
+        <% for (i=0;i<userResults.length;i++){%>
+            <li>
+                <a href="/users/details?<%= userResults[i].id %>"><%= userResults[i].nombre %></a>
+            </li>
+        <%}%>
+    </ul>
+    <h2>Search</h2>
+    <form action="/user/search" method="get">
+
+    <input type="text" name="search">
+    <input type="submit" value="Search">
+    </form>
+</body>
+</html>
