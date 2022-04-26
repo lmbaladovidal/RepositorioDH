@@ -1,0 +1,12 @@
+<%- include('../partials/head')%>
+<body>
+    <h2>Estamos Editando a <%= userToEdit.nombre %> </h2>
+
+    <form action="/user/edit?_method=PUT" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="" value="<%= userToEdit.nombre %>"><br>            
+        <input type="submit" name="enviar" id="" value="Enviar">
+    </form>
+
+</body>
+</html>

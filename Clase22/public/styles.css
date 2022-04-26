@@ -1,0 +1,19 @@
+input{
+    margin: 3px 0px 4px 15px;
+    height: 40px;
+    width: 70%;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+}
+
+input:hover{
+    box-shadow: 0 0 10px #000000;
+}
+
+.inpar{
+    border: 1px red solid;    
+}
+
+.par{
+    border: 1px green solid;
+}

@@ -1,0 +1,21 @@
+<%- include('../partials/head')%>
+<body>
+    <h1>User List</h1>
+    <ul>
+        <% for (i=0;i<users.length;i++){%>
+            <li>
+                <a href="/user/details?<%= users[i].id %>"><%= users[i].nombre %></a>
+                <form action="/user/delete/<%= users[i].id %>?_method=DELETE" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <%}%>
+    </ul>
+    <h2>Search</h2>
+    <form action="/user/search" method="get">
+
+    <input type="text" name="search">
+    <input type="submit" value="Search">
+    </form>
+</body>
+</html>
