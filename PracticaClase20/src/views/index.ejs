@@ -42,11 +42,13 @@
           <h1 class="ps-center">Nuentro Menu</h1>
           <br />
           <% for(let i=0;i<platos.length;i++){%>
-          <a href="/detalle/<%= i %>"><h4><%= platos[i].nombre %></h4></a>
-          <p class="ps-text-grey"></a>
-            <%= platos[i].descripcion %> <%= platos[i].precio %>
-          </p>
-          <br />
+            <a href="/detalle/<%= i %>">
+              <h4><%= platos[i].nombre %></h4>
+            </a>
+            <p class="ps-text-grey"></a>
+              <%= platos[i].descripcion %> U$S <%= platos[i].precio %>
+            </p>
+            <br />
           <% } %>
       </div>
 

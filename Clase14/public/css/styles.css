@@ -273,6 +273,10 @@ footer i{
     height: 30px;
 }
 
+.frm-register [type = 'submit']:hover, .frm-register [type = 'reset']:hover{
+    background-color: #0022AA;
+}
+
 .frm-register{
     display: flex;
     flex-direction: column;

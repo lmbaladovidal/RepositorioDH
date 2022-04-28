@@ -8,7 +8,6 @@ const platos = [ {nombre:"Carpaccio fresco",descripcion:"Entrada Carpaccio de sa
 const controller = {
 
     index:(req,res)=>{return res.render('index',{platos:platos});},
-    //index:(req,res)=>{return res.render('index',{platos:platos});},
     detalle:(req,res)=>{id = req.params.id
         id < platos.length?res.render('detalleMenu',platos[req.params.id]):res.send('Producto Inexistente') }
     }
