@@ -31,21 +31,33 @@ const controller = {
 		const id = products.length;
 		const name = req.body.name;
 		const description = req.body.description;
-		const price = req.body.description;
-		const category = req.body.category
+		const price = req.body.price;
+		const category = req.body.category;
+		const discount = req.body.discount;
 		newProducts = {id,name,description,price,category};
-		let data = JSON.stringify(newProducts);
+		products.push(newProducts);
+		let data = JSON.stringify(products);
 		fs.writeFileSync(productsFilePath, data);		
 		res.redirect('/products');
 	},
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		// Do the magic
+		const idQuery =req.params.id;
+		let product = products.find((producto)=>{return producto.id == idQuery});
+		console.log(product)
+		res.render('product-edit-form',{product:product})
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		const idQuery =req.params.id;
+		let pos=0;
+		products.find((producto,index)=>{producto.id == idQuery?pos=index:false});
+		products[pos].name =req.body.name;
+		products[pos].description = req.body.description;
+		products[pos].price = req.body.price;
+		products[pos].discount = req.body.discount;
+		res.render('detail',{productSelected:products[pos]})
 	},
 
 	// Delete - Delete one product from DB
