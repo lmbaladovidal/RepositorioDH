@@ -20,6 +20,14 @@ module.exports = (sequelize,dataTypes)=>{
     let config={
         timeStamps: false
     }
-    const Movies = sequelize.define(alias,columns,config);
-    return Movies;
+    const Genre = sequelize.define(alias,columns,config);
+    Genre.associate = function(models){
+        Genre.hasMany(models.Movies,{
+            as:"movies",
+            foreignKey:"genre_id"
+        });
+    }
+
+
+    return Genre;
 }

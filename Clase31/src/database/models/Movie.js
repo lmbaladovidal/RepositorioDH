@@ -29,5 +29,11 @@ module.exports = (sequelize,dataTypes)=>{
         timestamps:false
     }
     const Movies = sequelize.define(alias,columns,config);
+    Movies.associate = function(models){
+        Movies.belongsTo(models.Genres,{
+            as:"genres",
+            foreignKey:"genre_id"
+        });
+    }
     return Movies;
 }
