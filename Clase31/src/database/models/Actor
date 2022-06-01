@@ -1,0 +1,27 @@
+const Genre = require("./Genre");
+
+module.exports = (sequelize,dataTypes)=>{
+    let alias="Actors"
+    let columns={
+        id:{
+            type:dataTypes.INTEGER,
+            primaryKey:true,
+            autoIncrement:true
+        },
+        fisrt_name:{type:dataTypes.STRING},
+        last_change:{type:dataTypes.STRING},
+        rating:{type:dataTypes.DECIMAL(3,1)},
+        favorite_movie_id:{type:dataTypes.INTEGER}
+    }
+    let config={
+        timeStamps:false
+    }
+    const Actor= sequelize.define(alias,columns,config);
+    Actor.associate = function(models){
+        Actor.hasMany(models.actor_movie,{
+            as:"actor_movie",
+            foreignKey:"actor_id"
+        })
+    }
+    return Genre
+}

@@ -10,7 +10,7 @@ module.exports = (sequelize,dataTypes)=>{
             type:dataTypes.STRING
         },
         ranking:{
-            type:dataTypes.STRING
+            type:dataTypes.DECIMAL(3,1)
         },
         active:{
             type:dataTypes.STRING
@@ -18,7 +18,7 @@ module.exports = (sequelize,dataTypes)=>{
 
     }
     let config={
-        timeStamps: false
+        timeStamps:false
     }
     const Genre = sequelize.define(alias,columns,config);
     Genre.associate = function(models){
