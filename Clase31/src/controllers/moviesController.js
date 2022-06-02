@@ -4,7 +4,7 @@ module.exports = {
     list:(req,res)=>{
         db.Movies.findAll(
             {
-                include:[{association:"genres"}]
+                include:[{association:"genres"},{association:"actors"}]
             }
         )
             .then(resultado=>{res.render('moviesList',{movies:resultado})})
