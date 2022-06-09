@@ -34,6 +34,7 @@ module.exports = (sequelize,dataTypes)=>{
             as:"genres",
             foreignKey:"genre_id"
         })
+    Movies.associate = function(models){
         Movies.belongsToMany(models.Actors,{
             as: "actors",
             through:"actor_movie",
@@ -42,5 +43,6 @@ module.exports = (sequelize,dataTypes)=>{
             timestamps: false
         })
     }
+}
     return Movies;
 }

@@ -11,14 +11,14 @@ module.exports = {
             .catch(error=>{"SOY UN ERROR: "+console.log(error)})
     },
     new:(req,res)=>{        
-        db.Movies.findAll({
+        db.Movie.findAll({
                 include:[{association:"genres"}],
                 order:[['release_date','asc']]})
             .then(resultado=>{res.render('newestMovies',{movies:resultado})})
             .catch(error=>{console.log(error)})
     },
     recomended:(req,res)=>{
-                db.Movies.findAll({
+                db.Movie.findAll({
                     include:[{association:"genres"}],                
                     order:[
                         ['release_date','desc']],
@@ -31,7 +31,7 @@ module.exports = {
             .catch(error=>{console.log(error)})
     },
     detail:(req,res)=>{
-        db.Movies.findByPk(req.params.id)
+        db.Movie.findByPk(req.params.id)
             .then(resultado=>{res.render('moviesDetail',{movie:resultado})})
             .catch(error=>{console.log(error)})
     }

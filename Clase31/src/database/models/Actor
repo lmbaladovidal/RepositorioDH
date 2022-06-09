@@ -16,9 +16,9 @@ module.exports = (sequelize,dataTypes)=>{
     let config={
         timeStamps:false
     }
-    const Actors = sequelize.define(alias,columns,config);
-    Actors.associate = function(models){
-        Actors.belongsToMany(models.Movies,{
+    const Actor = sequelize.define(alias,columns,config);
+    Actor.associate = function(models){
+        Actor.belongsToMany(models.Movies,{
             as: "movies",
             through:"actor_movie",
             foreignKey:"actor_id",
@@ -27,5 +27,5 @@ module.exports = (sequelize,dataTypes)=>{
         })
 
     }
-    return Genre
+    return Actor
 }
