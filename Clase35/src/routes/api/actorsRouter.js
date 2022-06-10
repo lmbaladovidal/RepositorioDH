@@ -4,4 +4,7 @@ const actorsController = require('../../controllers/api/actorController');
 
 router.get("/",actorsController.list),
 router.post("/",actorsController.create),
-router.delete("/",actorsController.destroy)
+router.delete("/:id",actorsController.destroy),
+router.get("/:id",actorsController.detail)
+
+module.exports = router

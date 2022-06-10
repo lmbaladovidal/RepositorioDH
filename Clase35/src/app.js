@@ -33,8 +33,9 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use(moviesRoutes);
 app.use(genresRoutes);
-app.use("/api/genres",genreRoutesApi)
-app.use("/api/movies",movieRoutesApi)
+app.use("/api/genres",genreRoutesApi);
+app.use("/api/movies",movieRoutesApi);
+app.use("/api/actors",actorRouterApi);
 
 //Activando el servidor desde express
 app.listen('3001', () => console.log('Servidor corriendo en el puerto 3001'));
